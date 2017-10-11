@@ -1,0 +1,30 @@
+<h1> This is the home page </h1>
+
+<h1> Cats </h1>
+<% @cats.each do |cat|%>
+	<%= "Name of Cat:" %>
+	<%= cat.name %> <br/>
+<% end %>
+
+<h1> Users </h1>
+<% @users.each do |user|%>
+	<%= "Username:" %>
+	<%= user.name %> <%= " / " %>
+	<%= "Email:" %>
+	<%= user.email%><%= " / " %>
+	<%= "Age:" %>
+	<%= user.age %>
+	<br/>
+<% end %>
+
+<h1> Todo </h1>
+<% @todos.each do |todo|%>
+	<%= "Task:" %>
+	<%= todo.tasks%><%= " / " %>
+	<%= "Finished?:" %>
+	<%= todo.finished%>
+	<br/>
+<% end %>
+
+<%= link_to("Create Task", new_path) %>
+
